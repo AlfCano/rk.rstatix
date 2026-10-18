@@ -1,0 +1,137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.rstatix 0.0.1\n"
+"Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
+"POT-Creation-Date: 2026-10-16 13:00-0600\n"
+"PO-Revision-Date: 2026-10-16 13:00-0600\n"
+"Last-Translator: Alfonso Cano <alfonso.cano@correo.buap.mx>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Modern and robust statistical tests using the rstatix package. Includes Welch ANOVA, ANCOVA, and outlier diagnostics."
+msgstr "Tests statistiques modernes et robustes utilisant le package rstatix. Inclut l'ANOVA de Welch, l'ANCOVA et le diagnostic des valeurs aberrantes."
+
+msgid "Robust ANOVA (Welch & Games-Howell)"
+msgstr "ANOVA Robuste (Welch & Games-Howell)"
+
+msgid "Computes a Welch one-way ANOVA (does not assume equal variances) and the Games-Howell post-hoc test using rstatix."
+msgstr "Calcule une ANOVA de Welch à un facteur (ne suppose pas de variances égales) et le test post-hoc de Games-Howell en utilisant rstatix."
+
+msgid "Data frame"
+msgstr "Data frame"
+
+msgid "Dependent Variable (Numeric)"
+msgstr "Variable Dépendante (Numérique)"
+
+msgid "Grouping Variable (Factor)"
+msgstr "Variable de Regroupement (Facteur)"
+
+msgid "Calculate Effect Size (Eta Squared)"
+msgstr "Calculer la taille de l'effet (Êta carré)"
+
+msgid "Compute Games-Howell Post-hoc Test"
+msgstr "Calculer le test post-hoc de Games-Howell"
+
+msgid "Save post-hoc results as"
+msgstr "Enregistrer les résultats post-hoc sous"
+
+msgid "Data"
+msgstr "Données"
+
+msgid "Options"
+msgstr "Options"
+
+msgid "Robust ANOVA (Welch)"
+msgstr "ANOVA Robuste (Welch)"
+
+msgid "<b>Test:</b> Welch One-Way ANOVA (Unequal variances assumed)"
+msgstr "<b>Test :</b> ANOVA de Welch à un facteur (Variances inégales supposées)"
+
+msgid "Effect Size (Eta Squared)"
+msgstr "Taille de l'effet (Êta carré)"
+
+msgid "Games-Howell Post-hoc Test"
+msgstr "Test Post-hoc de Games-Howell"
+
+msgid "<i>Post-hoc results saved to workspace as: </i><code>"
+msgstr "<i>Résultats post-hoc enregistrés dans l'espace de travail sous : </i><code>"
+
+msgid "ANCOVA (Analysis of Covariance)"
+msgstr "ANCOVA (Analyse de Covariance)"
+
+msgid "Computes ANCOVA and estimated marginal means (EMMeans) adjusting for covariates using rstatix."
+msgstr "Calcule l'ANCOVA et les moyennes marginales estimées (EMMeans) en ajustant pour les covariables en utilisant rstatix."
+
+msgid "Covariate(s) (Numeric)"
+msgstr "Covariable(s) (Numérique)"
+
+msgid "Calculate Estimated Marginal Means (EMMeans)"
+msgstr "Calculer les Moyennes Marginales Estimées (EMMeans)"
+
+msgid "Perform pairwise comparisons for EMMeans (Bonferroni adjusted)"
+msgstr "Effectuer des comparaisons par paires pour les EMMeans (Ajustement de Bonferroni)"
+
+msgid "ANCOVA"
+msgstr "ANCOVA"
+
+msgid "Data Definition"
+msgstr "Définition des Données"
+
+msgid "Post-hoc & EMMeans"
+msgstr "Post-hoc & EMMeans"
+
+msgid "Analysis of Covariance (ANCOVA)"
+msgstr "Analyse de Covariance (ANCOVA)"
+
+msgid "Estimated Marginal Means (Adjusted for Covariates)"
+msgstr "Moyennes Marginales Estimées (Ajustées pour les Covariables)"
+
+msgid "Pairwise Comparisons (Bonferroni)"
+msgstr "Comparaisons par Paires (Bonferroni)"
+
+msgid "Identify Outliers"
+msgstr "Identifier les Valeurs Aberrantes"
+
+msgid "Quickly filters and identifies univariate outliers (and extreme outliers) per group using rstatix."
+msgstr "Filtre et identifie rapidement les valeurs aberrantes univariées (et extrêmes) par groupe en utilisant rstatix."
+
+msgid "Target Variable (Numeric)"
+msgstr "Variable Cible (Numérique)"
+
+msgid "Grouping Variable (Optional)"
+msgstr "Variable de Regroupement (Optionnel)"
+
+msgid "Show ONLY Extreme Outliers (values beyond 3x IQR)"
+msgstr "Afficher UNIQUEMENT les Valeurs Aberrantes Extrêmes (valeurs au-delà de 3x l'écart interquartile)"
+
+msgid "Filtering"
+msgstr "Filtrage"
+
+msgid "Outliers Diagnostics"
+msgstr "Diagnostic des Valeurs Aberrantes"
+
+msgid "<b>Criterion: </b>"
+msgstr "<b>Critère : </b>"
+
+msgid "EXTREME Outliers Only (3x IQR)"
+msgstr "Uniquement Valeurs Aberrantes EXTRÊMES (3x IQR)"
+
+msgid "All Outliers (1.5x IQR)"
+msgstr "Toutes les Valeurs Aberrantes (1.5x IQR)"
+
+msgid "<i>No outliers found in the dataset under the selected criteria.</i>"
+msgstr "<i>Aucune valeur aberrante trouvée dans le jeu de données selon les critères sélectionnés.</i>"
+
+msgid "Psychology / Social Science"
+msgstr "Psychologie / Sciences Sociales"
+
+msgid "Frequentist"
+msgstr "Fréquentiste"
+msgid "Save all results as (List)"
+msgstr "Enregistrer tous les résultats sous (Liste)"
+
+msgid "<i>All generated results saved to workspace as a list: </i><code>"
+msgstr "<i>Tous les résultats générés ont été enregistrés dans l'espace de travail sous forme de liste : </i><code>"

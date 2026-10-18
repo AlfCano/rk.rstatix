@@ -1,0 +1,32 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="IdentifyOutliers.js" />
+	<help file="IdentifyOutliers.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<connect governor="o_df.available" client="o_vs.root" />
+	</logic>
+	<dialog label="Identify Outliers">
+		<row id="row_vDDDDDTVNG">
+			<varselector id="o_vs" />
+			<column id="clm_fDDDDDTVNG">
+				<frame label="Data Definition" id="frm_DatDfntn">
+					<varslot id="o_df" label="Data frame" source="o_vs" classes="data.frame" required="true" />
+					<varslot id="o_var" label="Target Variable (Numeric)" source="o_vs" classes="numeric integer" required="true" />
+					<varslot id="o_group" label="Grouping Variable (Optional)" source="o_vs" />
+				</frame>
+				<frame label="Filtering" id="frm_Filterng">
+					<checkbox id="o_extreme" label="Show ONLY Extreme Outliers (values beyond 3x IQR)" value="TRUE" />
+				</frame>
+				<stretch />
+			</column>
+		</row>
+	</dialog>
+</document>

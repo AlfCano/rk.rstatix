@@ -1,0 +1,17 @@
+Package: rk.rstatix
+Type: Package
+Title: Modern and robust statistical tests using the rstatix package.
+        Includes Welch ANOVA, ANCOVA, and outlier diagnostics.
+Version: 0.0.1
+Date: 2026-10-17
+Author: Alfonso Cano
+Maintainer: Alfonso Cano <alfonso.cano@correo.buap.mx>
+Enhances: rkward
+Description: Modern and robust statistical tests using the rstatix
+        package. Includes Welch ANOVA, ANCOVA, and outlier diagnostics.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyLoad: yes
+URL: https://https://github.com/AlfCano/rk.rstatix
+Authors@R: person(given="Alfonso", family="Cano",
+        email="alfonso.cano@correo.buap.mx", role=c("aut", "cre"))

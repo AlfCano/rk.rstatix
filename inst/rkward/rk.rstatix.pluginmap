@@ -1,0 +1,127 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="RobustANOVAWelchGamesHowell"
+	id="RobustANOVAWelchGamesHowell_rkward"
+	po_id="RobustANOVAWelchGamesHowell_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<about
+		name="rk.rstatix"
+		shortinfo="Modern and robust statistical tests using the rstatix package. Includes Welch ANOVA, ANCOVA, and outlier diagnostics."
+		longinfo="Modern and robust statistical tests using the rstatix package. Includes Welch ANOVA, ANCOVA, and outlier diagnostics."
+		version="0.0.1"
+		releasedate="2026-10-17"
+		url="https://https://github.com/AlfCano/rk.rstatix"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_RbstANOVAWlchGmsHANCOVAAC"
+			label="ANCOVA (Analysis of Covariance)"
+			type="standard"
+			file="plugins/ANCOVAAnalysisofCovariance.xml"
+		>
+		</component>
+		<component
+			id="cmp_RbstANOVAWlchGmsHwllIdntO"
+			label="Identify Outliers"
+			type="standard"
+			file="plugins/IdentifyOutliers.xml"
+		>
+		</component>
+		<component
+			id="cmp_RbstANOVAWlchGmHRANOVAWGH"
+			label="Robust ANOVA (Welch &amp; Games-Howell)"
+			type="standard"
+			file="plugins/RobustANOVAWelchGamesHowell.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PsychologySocialScience"
+				label="Psychology / Social Science"
+			>
+				<menu
+					id="Frequentist"
+					label="Frequentist"
+				>
+					<entry
+						component="cmp_RbstANOVAWlchGmsHANCOVAAC"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PsychologySocialScience"
+				label="Psychology / Social Science"
+			>
+				<menu
+					id="Frequentist"
+					label="Frequentist"
+				>
+					<entry
+						component="cmp_RbstANOVAWlchGmsHwllIdntO"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="means"
+				label="means"
+			>
+				<entry
+					component="cmp_RbstANOVAWlchGmHRANOVAWGH"
+				/>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>

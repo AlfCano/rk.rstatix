@@ -1,0 +1,139 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.rstatix 0.0.1\n"
+"Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
+"POT-Creation-Date: 2026-10-16 13:00-0600\n"
+"PO-Revision-Date: 2026-10-16 13:00-0600\n"
+"Last-Translator: Alfonso Cano <alfonso.cano@correo.buap.mx>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Modern and robust statistical tests using the rstatix package. Includes Welch ANOVA, ANCOVA, and outlier diagnostics."
+msgstr "Moderne und robuste statistische Tests mit dem rstatix-Paket. Enthält Welch-ANOVA, ANCOVA und Ausreißerdiagnostik."
+
+msgid "Robust ANOVA (Welch & Games-Howell)"
+msgstr "Robuste ANOVA (Welch & Games-Howell)"
+
+msgid "Computes a Welch one-way ANOVA (does not assume equal variances) and the Games-Howell post-hoc test using rstatix."
+msgstr "Berechnet eine Welch-Einweg-ANOVA (setzt keine gleichen Varianzen voraus) und den Games-Howell Post-hoc-Test mithilfe von rstatix."
+
+msgid "Data frame"
+msgstr "Data Frame"
+
+msgid "Dependent Variable (Numeric)"
+msgstr "Abhängige Variable (Numerisch)"
+
+msgid "Grouping Variable (Factor)"
+msgstr "Gruppierungsvariable (Faktor)"
+
+msgid "Calculate Effect Size (Eta Squared)"
+msgstr "Effektstärke berechnen (Eta-Quadrat)"
+
+msgid "Compute Games-Howell Post-hoc Test"
+msgstr "Games-Howell Post-hoc-Test berechnen"
+
+msgid "Save post-hoc results as"
+msgstr "Post-hoc-Ergebnisse speichern als"
+
+msgid "Data"
+msgstr "Daten"
+
+msgid "Options"
+msgstr "Optionen"
+
+msgid "Robust ANOVA (Welch)"
+msgstr "Robuste ANOVA (Welch)"
+
+msgid "<b>Test:</b> Welch One-Way ANOVA (Unequal variances assumed)"
+msgstr "<b>Test:</b> Welch-Einweg-ANOVA (Ungleiche Varianzen angenommen)"
+
+msgid "Effect Size (Eta Squared)"
+msgstr "Effektstärke (Eta-Quadrat)"
+
+msgid "Games-Howell Post-hoc Test"
+msgstr "Games-Howell Post-hoc-Test"
+
+msgid "<i>Post-hoc results saved to workspace as: </i><code>"
+msgstr "<i>Post-hoc-Ergebnisse im Workspace gespeichert als: </i><code>"
+
+msgid "ANCOVA (Analysis of Covariance)"
+msgstr "ANCOVA (Kovarianzanalyse)"
+
+msgid "Computes ANCOVA and estimated marginal means (EMMeans) adjusting for covariates using rstatix."
+msgstr "Berechnet ANCOVA und geschätzte Randmittelwerte (EMMeans) bereinigt um Kovariaten mithilfe von rstatix."
+
+msgid "Covariate(s) (Numeric)"
+msgstr "Kovariate(n) (Numerisch)"
+
+msgid "Calculate Estimated Marginal Means (EMMeans)"
+msgstr "Geschätzte Randmittelwerte (EMMeans) berechnen"
+
+msgid "Perform pairwise comparisons for EMMeans (Bonferroni adjusted)"
+msgstr "Paarweise Vergleiche für EMMeans durchführen (Bonferroni-korrigiert)"
+
+msgid "ANCOVA"
+msgstr "ANCOVA"
+
+msgid "Data Definition"
+msgstr "Datendefinition"
+
+msgid "Post-hoc & EMMeans"
+msgstr "Post-hoc & EMMeans"
+
+msgid "Analysis of Covariance (ANCOVA)"
+msgstr "Kovarianzanalyse (ANCOVA)"
+
+msgid "Estimated Marginal Means (Adjusted for Covariates)"
+msgstr "Geschätzte Randmittelwerte (bereinigt um Kovariaten)"
+
+msgid "Pairwise Comparisons (Bonferroni)"
+msgstr "Paarweise Vergleiche (Bonferroni)"
+
+msgid "Identify Outliers"
+msgstr "Ausreißer identifizieren"
+
+msgid "Quickly filters and identifies univariate outliers (and extreme outliers) per group using rstatix."
+msgstr "Filtert und identifiziert schnell univariate Ausreißer (und extreme Ausreißer) pro Gruppe mithilfe von rstatix."
+
+msgid "Target Variable (Numeric)"
+msgstr "Zielvariable (Numerisch)"
+
+msgid "Grouping Variable (Optional)"
+msgstr "Gruppierungsvariable (Optional)"
+
+msgid "Show ONLY Extreme Outliers (values beyond 3x IQR)"
+msgstr "NUR extreme Ausreißer anzeigen (Werte jenseits von 3x IQR)"
+
+msgid "Filtering"
+msgstr "Filterung"
+
+msgid "Outliers Diagnostics"
+msgstr "Ausreißer-Diagnostik"
+
+msgid "<b>Criterion: </b>"
+msgstr "<b>Kriterium: </b>"
+
+msgid "EXTREME Outliers Only (3x IQR)"
+msgstr "Nur EXTREME Ausreißer (3x IQR)"
+
+msgid "All Outliers (1.5x IQR)"
+msgstr "Alle Ausreißer (1.5x IQR)"
+
+msgid "<i>No outliers found in the dataset under the selected criteria.</i>"
+msgstr "<i>Keine Ausreißer im Datensatz unter den ausgewählten Kriterien gefunden.</i>"
+
+msgid "Psychology / Social Science"
+msgstr "Psychologie / Sozialwissenschaften"
+
+msgid "Frequentist"
+msgstr "Frequentistisch"
+
+msgid "Save all results as (List)"
+msgstr "Alle Ergebnisse speichern als (Liste)"
+
+msgid "<i>All generated results saved to workspace as a list: </i><code>"
+msgstr "<i>Alle generierten Ergebnisse im Workspace als Liste gespeichert: </i><code>"
+

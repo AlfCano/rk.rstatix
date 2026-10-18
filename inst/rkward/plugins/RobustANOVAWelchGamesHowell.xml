@@ -1,0 +1,34 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="RobustANOVAWelchGamesHowell.js" />
+	<help file="RobustANOVAWelchGamesHowell.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<connect governor="w_df.available" client="w_vs.root" />
+	</logic>
+	<dialog label="Robust ANOVA (Welch &amp; Games-Howell)">
+		<row id="row_vDDDDVNGVF">
+			<varselector id="w_vs" />
+			<column id="clm_fDDDDVNGVF">
+				<frame label="Data" id="frm_Data">
+					<varslot id="w_df" label="Data frame" source="w_vs" classes="data.frame" required="true" />
+					<varslot id="w_dv" label="Dependent Variable (Numeric)" source="w_vs" classes="numeric integer" required="true" />
+					<varslot id="w_between" label="Grouping Variable (Factor)" source="w_vs" required="true" />
+				</frame>
+				<frame label="Options" id="frm_Options">
+					<checkbox id="w_effsize" label="Calculate Effect Size (Eta Squared)" value="TRUE" checked="true" />
+					<checkbox id="w_gh" label="Compute Games-Howell Post-hoc Test" value="TRUE" checked="true" />
+				</frame>
+				<saveobject label="Save post-hoc results as" checkable="true" initial="welch_results" id="w_save" />
+				<stretch />
+			</column>
+		</row>
+	</dialog>
+</document>

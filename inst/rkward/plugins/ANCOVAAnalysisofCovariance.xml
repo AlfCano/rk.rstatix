@@ -1,0 +1,35 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ANCOVAAnalysisofCovariance.js" />
+	<help file="ANCOVAAnalysisofCovariance.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<connect governor="a_df.available" client="a_vs.root" />
+	</logic>
+	<dialog label="ANCOVA">
+		<row id="row_vDDDDDDVNG">
+			<varselector id="a_vs" />
+			<column id="clm_fDDDDDDVNG">
+				<frame label="Data Definition" id="frm_DatDfntn">
+					<varslot id="a_df" label="Data frame" source="a_vs" classes="data.frame" required="true" />
+					<varslot id="a_dv" label="Dependent Variable (Numeric)" source="a_vs" classes="numeric integer" required="true" />
+					<varslot id="a_between" label="Grouping Variable (Factor)" source="a_vs" required="true" />
+					<varslot id="a_covar" label="Covariate(s) (Numeric)" source="a_vs" classes="numeric integer" required="true" multi="true" />
+				</frame>
+				<frame label="Post-hoc &amp; EMMeans" id="frm_PsthcEMM">
+					<checkbox id="a_emmeans" label="Calculate Estimated Marginal Means (EMMeans)" value="TRUE" checked="true" />
+					<checkbox id="a_emmeans_posthoc" label="Perform pairwise comparisons for EMMeans (Bonferroni adjusted)" value="TRUE" checked="true" />
+				</frame>
+				<saveobject label="Save all results as (List)" checkable="true" initial="ancova_results" id="a_save" />
+				<stretch />
+			</column>
+		</row>
+	</dialog>
+</document>
