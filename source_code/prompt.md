@@ -1,4 +1,4 @@
-# The Golden Rules of RKWard Plugin Development (v4.1)
+# The Golden Rules of RKWard Plugin Development (v4.2)
 
 *Comprehensive guidelines for `rkwarddev` (0.10-3+) based on real-world debugging and advanced architectural design.*
 
@@ -64,11 +64,15 @@ Never assume a user's variable name is "safe" (no spaces, no special chars).
 *   **The Rule:** Always quote variable names when passing them to R functions. For tidyverse/formulas, wrap them in backticks. For standard subsetting, use quoted strings.
 *   **JS Helper Pattern:** Strip extraneous `[[` and `$` syntax using a custom `getRawCol(fullName)` JS parser function before generating the R code.
 
-### 9. Preview Logic Stability & Output Spam
-Previews run in a detached, clean R environment, but they execute *the entire code block* every time a parameter changes.
-*   **Requirement 1:** You must re-`require()` any packages inside the preview block.
-*   **Requirement 2 (The Output Spam):** Always wrap text outputs (`rk.header()`, `rk.results()`) and object saving (`my_plot <- p`) inside an `if (!is_preview) { ... }` block in your JavaScript `printout` logic. Otherwise, RKWard will spam the user's Output Window with duplicate text every time they tweak a setting during preview.
-
+### 9. Preview Logic Stability & Output Spam (The `is_preview` Flag)
+Previews run continuously every time a parameter changes. You must prevent the plugin from saving files to disk, saving objects to the workspace, or printing duplicate headers during a preview.
+*   **The Trap:** Do not evaluate `is_preview` in R (`echo("if(!is_preview) ...")`). R does not know this variable, and it will throw an "object not found" error.
+*   **The Rule:** The evaluation must happen strictly in **JavaScript**. Wrap all permanent actions in this JS condition:
+    ```javascript
+    if (typeof is_preview === 'undefined' || !is_preview) {
+        // echo() commands for saving, exporting, or printing headers
+    }
+    ```
 ---
 
 ## Part IV: UI & Layout
@@ -130,3 +134,22 @@ A seemingly innocent 50KB plot can bloat an `.RData` workspace to 500MB+ if gene
         rm(list = intersect(ls(), c("svy_filtered", "plot_data")))
         gc()
         ```
+## Part VI: Advanced Rendering (HTML & Widgets)
+
+### 13. The HTML Preview & Injection Protocol
+Standard RKWard previews are hardcoded to expect static graphics (`plot`, `ggplot`). If you try to output HTML or interactive widgets (like `tinytable`, `DT`, `leaflet`), the default preview will spawn a giant, empty graphics window and crash the layout, or it will spit raw HTML text into the console.
+*   **The XML Rule (mode="output"):** Never use the standard `rk.XML.preview()` for HTML. You must force the preview node into "output" mode so RKWard disables the graphics device and listens for HTML.
+    ```R
+    # Inject via XiMpLe
+    preview_node <- XiMpLe::XMLNode("preview", attrs = list(label = "Preview HTML", mode = "output"))
+    ```
+*   **The JS/R Rendering Rule:** Do not use `print()` or `show()` to display the HTML. Instead, export the widget to a temporary file in R, read it as a raw string, and inject it directly into RKWard's internal browser engine via `rk.get.output.html.file()`.
+    ```R
+    // Inside JS printout (This must run ALWAYS, bypassing the is_preview check):
+    echo('tmp_html <- tempfile(fileext = ".html")\n');
+    echo('your_pkg::save_html(res_table, tmp_html)\n');
+    echo('html_str <- paste(readLines(tmp_html, warn = FALSE), collapse = "\\n")\n');
+    echo('cat(html_str, file = rk.get.output.html.file(), append = TRUE)\n');
+    ```
+*   **Why it works:** In `mode="output"`, RKWard magically intercepts `rk.get.output.html.file()`. During a preview, it renders the HTML in the plugin's tiny preview box. During a final submit, it appends it to the official Output Window.
+
